@@ -1,12 +1,14 @@
 package com.wizaye.CrudApp;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 // refers to spring understanding the class to be managed by the spring
 @Component
 public class Dev {
     @Autowired
+    @Qualifier("laptop") // refers to the Laptop class in case of confusion
     private Computer comp;
     /*  1. Instance variable by default gets null value
         2. You can solve this by using the 'new' keyword to create the object
