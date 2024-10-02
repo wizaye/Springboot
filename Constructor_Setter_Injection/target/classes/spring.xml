@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!-- bean definitions here -->
+        <bean class="com.wizaye.Dev" id="dev">
+                <!-- Setter Injection-->
+                <!-- <property name="age" value="12"/>-->
+                <!-- Constructor Injection -->
+                <constructor-arg  name="age" value="14"/>
+                <constructor-arg name="laptop" ref="lap1"/>
+                <!--you can also use index for setting the value -->
+                <property name="laptop" ref="lap1"/>
+        </bean>
+        <!-- bean definitions here-->
+        <bean class="com.wizaye.Laptop" id="lap1">
+
+        </bean>
+        <!-- Another Object of the Dev with a different ID that will be created inside the IOC-->
+
+
+</beans>
+
+<!--get the definition of beans by spring 6 bean config xml file -->
