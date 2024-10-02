@@ -13,10 +13,14 @@ public class App
             4. In the resources folder create spring.xml file to let know the spring framework that this is the config file.
         */
         ApplicationContext context= new ClassPathXmlApplicationContext("spring.xml");
-        //Dev obj=(Dev)context.getBean(Dev.class);
-        Dev obj =(Dev)context.getBean("dev");
-        obj.build();
-        System.out.println( "Hello World!" );
+//        Dev obj=(Dev)context.getBean(Dev.class);
+       /*   1. When you run this code with only the application context and no other bean fetching, then the objects will only be created
+                of the classes who's config is present in the spring.xml file.
+            Dev obj =(Dev)context.getBean("dev");
+            obj.build();
+            System.out.println( "Hello World!" );
+       */
+
     }
 }
 // JVM
