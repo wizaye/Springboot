@@ -1,0 +1,31 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!-- bean definitions here -->
+        <!-- Searches by the name and both id's being same throws an error -->
+<!--        <bean class="com.wizaye.Dev" id="dev" autowire="byName">-->
+        <bean class="com.wizaye.Dev" id="dev" autowire="byType">
+                <!--Property for Computer Interface-->
+                <!--<property name="com" ref="lap1"/>-->
+
+                <!-- This Doesn't have any issue with name and ref being same (That's what autowiring is about) -->
+                <!-- Since removing the property tag throws an error what if we tell spring how to connect automatically?-->
+                <!--<property name="com" ref="com"/>-->
+
+        </bean>
+        <!-- bean definitions here-->
+        <!-- It becomes the primary bean -->
+        <bean class="com.wizaye.Laptop" id="com1" primary="true" >
+
+        </bean>
+        <bean class="com.wizaye.Desktop" id="com">
+
+        </bean>
+        <!-- Another Object of the Dev with a different ID that will be created inside the IOC-->
+
+
+</beans>
+
+<!--get the definition of beans by spring 6 bean config xml file -->
