@@ -7,7 +7,7 @@
 6. Spring Boot includes production-ready features such as metrics, health checks, and externalized configuration.
 
 # Typical Web App
-![MVC Architecture](./workflow_diagram.svg)
+![MVC Architecture](./workflow_diagram.png)
 
 # Spring's MVC
 1. Spring uses servlets which run on the Tomcat server.
